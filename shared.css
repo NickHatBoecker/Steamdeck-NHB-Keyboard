@@ -1,0 +1,108 @@
+/**
+ * ################
+ * ### VARIABLES
+ * ################
+ */
+:root {
+    /* Custom Colors */
+    --black-color: #000;
+    --white-color: #fff;
+    --primary-color: #bc2d2d; /* Red */
+    --primary-darker-color: #6c1a1a; /* Red */
+    --secondary-color: #141414; /* Black */
+    --tertiary-color: #f2992e; /* NHB Orange */
+    --keyboard-background: #000;
+}
+
+/* Color Overwrites */
+.DefaultTheme .virtualkeyboard_KeyboardKey_2KhPX {
+    --key-background-color: var(--secondary-color) !important;
+    --key-spacebar-background-color: var(--primary-color) !important;
+    --key-enter-background-color: var(--primary-color) !important;
+
+    --key-toggleon-color: var(--primary-color) !important;
+    --key-toggleon-background-color: var(--secondary-color) !important;
+
+    --key-toggleoneshot-background-color: var(--secondary-color) !important;
+    --key-toggleoneshot-color: var(--primary-color) !important;
+
+    /* --key-pointer-background-color: var(--tertiary-color) !important; */
+    --key-deadkeyactive-color: var(--tertiary-color) !important;
+
+    /* If you hold down to "u" for example */
+    --key-extendedkey-background-color: var(--primary-color) !important;
+
+    --key-caps-background-color: var(--secondary-color) !important;
+    --key-shift-background-color: var(--secondary-color) !important;
+    --key-tab-background-color: var(--secondary-color) !important;
+    --key-meta-background-color: var(--secondary-color) !important;
+    --key-backspace-background-color: var(--primary-color) !important;
+}
+
+.DefaultTheme.virtualkeyboard_Keyboard_45rH7 {
+    /* Keyboard Background Color */
+    background-color: var(--keyboard-background) !important;
+}
+
+.DefaultTheme .virtualkeyboard_Touched_3UFQq {
+    /**
+     * This fixes a problem where holding down the number row,
+     * the extra options would go behind the first row of letters
+     */
+    z-index: 999;
+}
+
+.DefaultTheme .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_Touched_3UFQq {
+    /* When touching a key */
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+}
+
+/**
+ * ################
+ * ### RED KEYS
+ * ################
+ */
+.DefaultTheme div[data-key="^"] div,
+.DefaultTheme div[data-key="w"] div,
+.DefaultTheme div[data-key="a"] div,
+.DefaultTheme div[data-key="s"] div,
+.DefaultTheme div[data-key="d"] div,
+.DefaultTheme div[data-key="ArrowLeft"] div,
+.DefaultTheme div[data-key="ArrowRight"] div {
+    background-color: var(--primary-color) !important;
+}
+
+.DefaultTheme div[data-key="^"].gpfocus div,
+.DefaultTheme div[data-key="w"].gpfocus div,
+.DefaultTheme div[data-key="a"].gpfocus div,
+.DefaultTheme div[data-key="s"].gpfocus div,
+.DefaultTheme div[data-key="d"].gpfocus div,
+.DefaultTheme div[data-key="ArrowLeft"].gpfocus div,
+.DefaultTheme div[data-key="ArrowRight"].gpfocus div {
+    background-color: var(--white-color) !important;
+}
+
+.DefaultTheme div[data-key="^"] div.virtualkeyboard_Touched_3UFQq,
+.DefaultTheme div[data-key="w"] div.virtualkeyboard_Touched_3UFQq,
+.DefaultTheme div[data-key="a"] div.virtualkeyboard_Touched_3UFQq,
+.DefaultTheme div[data-key="s"] div.virtualkeyboard_Touched_3UFQq,
+.DefaultTheme div[data-key="d"] div.virtualkeyboard_Touched_3UFQq,
+.DefaultTheme div[data-key="ArrowLeft"] div.virtualkeyboard_Touched_3UFQq,
+.DefaultTheme div[data-key="ArrowRight"] div.virtualkeyboard_Touched_3UFQq {
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+}
+
+/**
+ * ################
+ * ### BLACK KEYS
+ * ################
+ */
+.DefaultTheme div[data-key="´"] div {
+    background-color: var(--secondary-color);
+}
+
+.DefaultTheme div[data-key="´"].gpfocus div {
+    background-color: var(--white-color);
+}

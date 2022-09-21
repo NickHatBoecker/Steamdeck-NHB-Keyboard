@@ -1,0 +1,10 @@
+{
+    "name": "NHB",
+    "version": "v1.0",
+    "target": "Keyboard",
+    "author": "NickHatBoecker",
+    "manifest_version": 2,
+    "inject": {
+        "shared.css": ["SP"]
+    }
+}
